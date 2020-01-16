@@ -1,0 +1,14 @@
+{
+    "files.autoSave": "afterDelay",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "python.formatting.autopep8Args": ["--max-line-length=160"],
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": ["--max-line-length=160","--ignore=D202,D401"],
+    "python.linting.pycodestyleEnabled": false,
+    "python.linting.pylintEnabled": false,
+    "editor.autoIndent": "full",
+    "python.pythonPath": "/usr/bin/python3"
+}
