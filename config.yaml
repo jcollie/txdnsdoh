@@ -1,0 +1,81 @@
+upstreams:
+  - id: cleanbrowsing-1
+    url: "https://doh.cleanbrowsing.org/doh/family-filter"
+    ip: "185.228.168.168"
+    method: https_get
+
+  - id: cleanbrowsing-2
+    url: "https://doh.cleanbrowsing.org/doh/family-filter"
+    ip: "185.228.168.10"
+    method: https_get
+
+  - id: cloudflare-1
+    url: "https://cloudflare-dns.com/dns-query"
+    ip: "1.1.1.1"
+    method: https_post
+
+  - id: cloudflare-2
+    url: "https://cloudflare-dns.com/dns-query"
+    ip: "1.0.0.1"
+    method: https_post
+
+  - id: cloudflare-3
+    url: "https://cloudflare-dns.com/dns-query"
+    ip: "2606:4700:4700::1111"
+    method: https_post
+
+  - id: cloudflare-4
+    url: "https://cloudflare-dns.com/dns-query"
+    ip: "2606:4700:4700::1001"
+    method: https_post
+
+  - id: quad9-1
+    url: "https://dns.quad9.net/dns-query"
+    ip: "9.9.9.9"
+    method: https_post
+
+  - id: quad9-2
+    url: "https://dns.quad9.net/dns-query"
+    ip: "149.112.112.112"
+    method: https_post
+
+  - id: quad9-3
+    url: "https://dns.quad9.net/dns-query"
+    ip: "2620:fe::fe"
+    method: https_post
+
+  - id: quad9-4
+    url: "https://dns.quad9.net/dns-query"
+    ip: "2620:fe::9"
+    method: https_post
+
+  - id: google-1
+    url: "https://dns.google/dns-query"
+    ip: "8.8.8.8"
+    method: https_post
+
+  - id: google-2
+    url: "https://dns.google/dns-query"
+    ip: "8.8.4.4"
+    method: https_post
+
+  - id: google-3
+    url: "https://dns.google/dns-query"
+    ip: "2001:4860:4860::8888"
+    method: https_post
+
+  - id: google-4
+    url: "https://dns.google/dns-query"
+    ip: "2001:4860:4860::8844"
+    method: https_post
+
+server:
+  tcp_listeners:
+    - address: "0.0.0.0"
+      port: 5300
+      upstream: cleanbrowsing-1
+
+  udp_listeners:
+    - address: "0.0.0.0"
+      port: 5300
+      upstream: cloudflare-1

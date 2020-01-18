@@ -1,3 +1,4 @@
 /.vscode/.ropeproject
 __pycache__
-
+/dist
+/txdnsdoh.egg-info
